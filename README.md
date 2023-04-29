@@ -14,8 +14,20 @@
 
 
 #### ANSWER-10 
-#### CipherText-only Attack
-##### In cryptography, a ciphertext-only attack (COA) or known ciphertext attack is an attack model for cryptanalysis where the attacker is assumed to have access only to a set of ciphertexts.The attack is completely successful if the corresponding plaintexts can be deduced, or even better, the key. The ability to obtain any information at all about the underlying plaintext is still considered a success. For example, if an adversary is sending ciphertext continuously to maintain traffic-flow security, it would be very useful to be able to distinguish real messages from nulls. Even making an informed guess of the existence of real messages would facilitate traffic analysis. Every modern cipher attempts to provide protection against ciphertextonly attacks. The vetting process for a new cipher design standard usually takes many years and includes exhaustive testing of large quantities of ciphertext for any statistical departure from random noise. Encryption Standard process. Also, the field of steganography evolved, in part, to develop methods like mimic functions that allow one piece of data to adopt the statistical profile of another. Nonetheless poor cipherusage or reliance on home-grown proprietary algorithms that have notbeen subject to thorough scrutiny has resulted in many computer-age encryption systems that are still subject to ciphertext-only attack.
- 
-#### Known Plaintext Attack
-##### The known-plaintext attack (KPA) or crib is an attack model for cryptanalysis where the attacker has samples of both the plaintext and its encrypted version (ciphertext), and is at liberty to make use of them to reveal further secret information such as secret keys and code books. The term "crib" originated at Bletchley Park, the British World War II decryption operation. Classical ciphers are typically vulnerable to known-plaintext attack. For example, a Caesar cipher can be solved using a single letter of corresponding plaintext and ciphertext to decrypt entirely. A general monoalphabetic substitution cipher needs several character pairs and some guessing if there are fewer than 26 distinct pairs. Modern ciphers such as Advanced Encryption Standard are not susceptible to known-plaintext attacks.
+####
+
+Ciphertext-only and known-plaintext attacks are two types of attacks that can be used to break cryptographic systems. 
+
+1. Ciphertext-only attack: In a ciphertext-only attack, the attacker has access only to the encrypted ciphertext but not to the corresponding plaintext or the encryption key. The goal of the attacker is to determine the plaintext or the encryption key. 
+
+For example, if an attacker intercepts an encrypted message that was sent over the internet, they will have access to the ciphertext but not the plaintext. The attacker's goal in this scenario is to determine the plaintext of the message or the encryption key used to encrypt it. 
+
+Ciphertext-only attacks are often difficult to execute because the attacker has no knowledge of the underlying plaintext or the encryption key. One way to execute a ciphertext-only attack is through a brute force method, where the attacker tries every possible encryption key until the correct one is found.
+
+2. Known-plaintext attack: In a known-plaintext attack, the attacker has access to both the plaintext and its corresponding ciphertext. The goal of the attacker is to determine the encryption key used to encrypt the plaintext. 
+
+For example, if an attacker intercepts an encrypted message along with its original plaintext, they can use this knowledge to determine the encryption key used to encrypt the plaintext. 
+
+Known-plaintext attacks are often easier to execute than ciphertext-only attacks because the attacker has knowledge of both the plaintext and the corresponding ciphertext. One common technique for executing a known-plaintext attack is through frequency analysis, where the attacker analyzes the frequency of characters or patterns in the plaintext and uses this information to determine the encryption key. 
+
+Both ciphertext-only and known-plaintext attacks are important to consider when designing and implementing cryptographic systems, as they can both be used to break the security of a system.
